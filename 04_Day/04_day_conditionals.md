@@ -1,18 +1,33 @@
-## Table of Contents
+<div align="center">
+  <h1> 30 Days Of JavaScript</h1>
+  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
+  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
+  </a>
+  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
+  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
+  </a>
 
-[<< Day 3](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day/03_day_booleans_operators_date.md) | [Day 5 >>](#)
---
+  <sub>Author:
+  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+  <small> January, 2020</small>
+  </sub>
+</div>
 
-![Thirty Days Of JavaScript](./day_1_4.png)
+[<< Day 3](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day/03_booleans_operators_date.md) | [Day 5 >>](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/05_Day/05_day_arrays.md)
+
+![Thirty Days Of JavaScript](../images/banners/day_1_4.png)
 
 - [📔 Day 4](#%f0%9f%93%94-day-4)
   - [Conditionals](#conditionals)
-    - [If](#if)
-    - [If Else](#if-else)
-    - [If else if else](#if-else-if-else)
+    - [if](#if)
+    - [if else](#if-else)
+    - [if else if else](#if-else-if-else)
     - [Switch](#switch)
     - [Ternary Operators](#ternary-operators)
-- [💻 Exercise - 8 : Conditionals](#%f0%9f%92%bb-exercise---8--conditionals)
+  - [💻 Exercises](#%f0%9f%92%bb-exercises)
+    - [Exercises: Level 1](#exercises-level-1)
+    - [Exercises: Level 2](#exercises-level-2)
+    - [Exercises: Level 3](#exercises-level-3)
 
 # 📔 Day 4
 
@@ -32,7 +47,7 @@ Conditions can be implementing using the following ways:
 - switch
 - ternary operator
 
-### If
+### if
 
 In JavaScript and other programming languages the key word _if_ use to check if a condition is true and to execute the block code. To create an if condition, we need _if_ keyword, condition inside a parenthesis and block of code inside a curly bracket({}).
 
@@ -62,7 +77,7 @@ if (isRaining) {
 
 As you can see in the above condition, 3 is greater than 0 and it is a positive number. The condition was true and the block code was executed. However, if the condition is false, we do not see a result. The same goes for the second condition, if isRaining is false the if block will not be executed and we do not see an output. In order to see the result of the falsy condition, we should have another block, which is going to be _else_.
 
-### If Else
+### if else
 
 If condition is true the first block will be executed, if not the else condition will be executed.
 
@@ -113,7 +128,7 @@ if (isRaining) {
 
 The above condition is false, therefore the else block was executed. How about if our condition is more than two, we will use *else if* conditions.
 
-### If else if else
+### if else if else
 
 On our daily life, we make decision on daily basis. We make decision not by checking  one or two conditions instead we make decisions based on multiple conditions. As similar to our daily life, programming is also full conditions. We use *else if* when we have multiple conditions.
 
@@ -160,7 +175,23 @@ if (weather === 'rainy') {
 
 ### Switch
 
-Switch  is an alternative for **if else if else else**
+Switch  is an alternative for **if else if else else**.
+The switch statement starts with a switch keyword followed by a parenthesis and code block. Inside the code block we will have different cases. Case block run if the value in the switch statement parenthesis match with the case vale. The break is to terminate and it does not go down after the condition is satisfied.  The default block run if all the cases don't satisfy the condition.
+
+```js
+switch(caseValue){
+  case 1:
+    // code
+    break
+  case 2:
+   // code
+   break
+  case 3:
+  // code
+  default:
+   // code
+}
+```
 
 ```js
 let weather = 'cloudy'
@@ -177,9 +208,11 @@ switch (weather) {
   default:
     console.log(' No need for rain coat.')
 }
+
 // Switch More Examples
-var dayUserInput = prompt('What day is today ?')
-var day = dayUserInput.toLowerCase()
+let dayUserInput = prompt('What day is today ?')
+let day = dayUserInput.toLowerCase()
+
 switch (day) {
   case 'monday':
     console.log('Today is Monday')
@@ -202,10 +235,10 @@ switch (day) {
   case 'sunday':
     console.log('Today is Sunday')
     break
-
   default:
     console.log('It is not a week day.')
 }
+
 ```
 
 ### Ternary Operators
@@ -219,9 +252,11 @@ isRaining
   : console.log('No need for a rain coat.')
 ```
 
-🌕  You are extraordinary and you have a remarkable potential. You have just completed day 4 challenge and you are four steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.  
+🌕  You are extraordinary and you have a remarkable potential. You have just completed day 4 challenges and you are four steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.  
 
-# 💻 Exercise - 8 : Conditionals
+## 💻 Exercises
+
+### Exercises: Level 1
 
 1. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
 
@@ -239,8 +274,11 @@ isRaining
    Enter your age: 30
    You are 5 years older than me.
    ```
-  
-1. If a is greater than b return a is greater than b else a is less than b. Do it both using if else and ternary operator.
+
+1. If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement in to ways
+
+    - using if else
+    - ternary operator.
 
     ```js
       let a = 4
@@ -251,29 +289,30 @@ isRaining
       4 is greater than 3
     ```
 
-1. Write a code which give grade students according to theirs scores:
-   - 80-100, A
-   - 70-89, B
-   - 60-69, C
-   - 50-59, D
-   - 0 -49, F
-1. Check if the season is Autumn, Winter, Spring or Summer.
-   If the user input is:
-   - September, October or November, the season is Autumn.
-   - December, January or February, the season is Winter.
-   - March, April or May, the season is Spring
-   - June, July or August, the season is Summer
-
 1. Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using JavaScript?
 
     ```sh
     Enter a number: 2
     2 is an even number
 
-    Enter a number 9
+    Enter a number: 9
     9 is is an odd number.
     ```
 
+### Exercises: Level 2
+
+1. Write a code which  can give grade to students according to theirs scores:
+   - 80-100, A
+   - 70-89, B
+   - 60-69, C
+   - 50-59, D
+   - 0-49, F
+1. Check if the season is Autumn, Winter, Spring or Summer.
+   If the user input is:
+   - September, October or November, the season is Autumn.
+   - December, January or February, the season is Winter.
+   - March, April or May, the season is Spring
+   - June, July or August, the season is Summer
 1. Check if a day is weekend day or a working day. Your script will take day as an input.
 
 ```sh
@@ -290,7 +329,9 @@ isRaining
     Friday is a work day.
   ```
 
-8. Write a program which tells the number days in a month.
+### Exercises: Level 3
+
+1. Write a program which tells the number days in a month.
 
   ```sh
     Enter month: January
@@ -306,7 +347,6 @@ isRaining
     February has 28 days.
   ```
 
-
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 3](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day/03_day_booleans_operators_date.md) | [Day 5 >>](#)
+[<< Day 3](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day/03_booleans_operators_date.md) | [Day 5 >>](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/05_Day/05_day_arrays.md)
